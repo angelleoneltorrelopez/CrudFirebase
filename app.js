@@ -88,7 +88,6 @@ function editar(id, nombre, apellido, fecha){
     var apellido = document.getElementById('apellido').value;
     var fecha = document.getElementById('fecha').value;
 
-    // Set the "capital" field of the city 'DC'
     return washingtonRef.update({
       Nombre: nombre,
       Apellido: apellido,
@@ -97,7 +96,7 @@ function editar(id, nombre, apellido, fecha){
     .then(function() {
         console.log("Document successfully updated!");
         boton.innerHTML = 'Guardar'; // realizado ya los cambios y depues de presionar editar cambiamos el nombre a Guardar
-    
+
         document.getElementById('nombre').value = '';
         document.getElementById('apellido').value = '';
         document.getElementById('fecha').value = '';
